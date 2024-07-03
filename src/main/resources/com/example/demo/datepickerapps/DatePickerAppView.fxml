@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.datepickerapp.DatePickerAppController">
+   <children>
+      <DatePicker fx:id="dtpicker" layoutX="200.0" layoutY="95.0" onAction="#doShowDate" />
+      <Label layoutX="200.0" layoutY="35.0" text="Date Picker App">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="outputDate" layoutX="102.0" layoutY="191.0" text="Output:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

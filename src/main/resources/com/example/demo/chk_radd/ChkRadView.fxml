@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.chk_rad.ChkRadController">
+   <children>
+      <Label layoutX="236.0" layoutY="14.0" text="Electricity Bill">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="118.0" layoutY="60.0" text="Units">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="unitlbl" layoutX="196.0" layoutY="60.0" />
+      <Button layoutX="412.0" layoutY="174.0" mnemonicParsing="false" onAction="#doCalBill" text="Calculate Bill">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <CheckBox fx:id="fanlbl" layoutX="118.0" layoutY="105.0" mnemonicParsing="false" onAction="#doInput" text="Fan">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="aclbl" layoutX="118.0" layoutY="140.0" mnemonicParsing="false" onAction="#doInputac" text="AC">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </CheckBox>
+      <RadioButton fx:id="comlbl" layoutX="116.0" layoutY="178.0" mnemonicParsing="false" text="Commercial">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="grp1" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="houselbl" layoutX="271.0" layoutY="178.0" mnemonicParsing="false" text="Household" toggleGroup="$grp1">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </RadioButton>
+      <Label layoutX="82.0" layoutY="229.0" text="Fan Bill">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="fandisplbl" layoutX="160.0" layoutY="229.0" />
+      <Label layoutX="82.0" layoutY="267.0" text="AC Bill">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="acdisplbl" layoutX="160.0" layoutY="267.0" />
+      <Label layoutX="331.0" layoutY="229.0" text="Units Bill">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="unitdisplbl" layoutX="409.0" layoutY="229.0" />
+      <Label layoutX="82.0" layoutY="348.0" text="Net Bill">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="netlbl" layoutX="160.0" layoutY="346.0" />
+      <Label layoutX="82.0" layoutY="307.0" text="Discount">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="disclbl" layoutX="160.0" layoutY="307.0" />
+   </children>
+</AnchorPane>
