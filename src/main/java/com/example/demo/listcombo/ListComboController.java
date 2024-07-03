@@ -36,6 +36,21 @@ public class ListComboController {
     private ListView<String> listSelectedPrice;
 
     @FXML
+    void doRemoveItems(MouseEvent event) {
+    if(event.getClickCount()==2) {
+//        listSelectedPrice.getSelectionModel().select(listSelectedItems.getSelectionModel().getSelectedIndex());
+//        listSelectedItems.getItems().remove(listSelectedItems.getSelectionModel().getSelectedItem());
+//        listSelectedPrice.getItems().remove(listSelectedPrice.getSelectionModel().getSelectedItem());
+        //easy way
+        int selectedIndex = listSelectedItems.getSelectionModel().getSelectedIndex();
+        if (selectedIndex != -1) { // Check if an item is actually selected
+            listSelectedItems.getItems().remove(selectedIndex);
+            listSelectedPrice.getItems().remove(selectedIndex);
+        }
+    }
+    }
+
+    @FXML
     void calBill(ActionEvent event) {
     int bill=0;
     for(String prices: listSelectedPrice.getItems()) {
@@ -65,6 +80,8 @@ public class ListComboController {
     void doFill(ActionEvent event) {
         listAvailableItems.getItems().clear();
         listAvailablePrice.getItems().clear();
+        listSelectedPrice.getItems().clear();
+        listSelectedItems.getItems().clear();
 
         if(comboItems.getSelectionModel().getSelectedIndex()==1) {
             listAvailableItems.getItems().addAll(burgerTypes);
